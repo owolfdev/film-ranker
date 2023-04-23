@@ -29,7 +29,7 @@ app.post("/get-top-films", (req, res) => {
   }
 });
 
-const port = process.env.PORT || 3010;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Film ranking app listening on port ${port}`);
 });

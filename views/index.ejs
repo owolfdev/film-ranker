@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Film Ranking</title>
+</head>
+
+<body>
+    <h1>Film Ranking</h1>
+    <p>This Film Ranking App is a web application built using Node.js, Express, and EJS that allows users to
+        input
+        and visualize various ranked lists of films. The app employs a JavaScript Map object to calculate and display
+        the top
+        films based on their positions in the provided lists.</p>
+
+    <p>The user can modify the input film lists through a text area, and upon clicking the "Get Top Films" button, the
+        app
+        processes the data to find the top films by aggregating their scores. Each film's score is determined by its
+        position in
+        the input lists, with higher scores assigned to films appearing earlier in the lists.</p>
+
+    <p>The application leverages the Map object to efficiently store and update the scores of each film as it processes
+        the
+        input lists. Once the top films are determined, the app presents the results in a sorted table, allowing users
+        to easily
+        visualize the most popular films based on the provided rankings.</p>
+    <form id="film-form">
+        <label for="film-lists">Film Lists:</label>
+        <br />
+        <textarea id="film-lists" rows="15" cols="100"><%= JSON.stringify(filmLists, null, 2) %></textarea>
+        <br />
+        <button type="submit">Get Top Films</button>
+    </form>
+    <div id="results"></div>
+    <script src="/main.js"></script>
+</body>
+
+</html>
